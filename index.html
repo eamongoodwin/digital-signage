@@ -38,15 +38,30 @@
             "https://www.digitalattackmap.com/",
             "https://www.meteorshowers.org/"
         ];
+
+        // Shuffle function using Fisher-Yates algorithm
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                let j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
         var index = 0;
+
         function rotateSites() {
             document.getElementById("iframe").src = urls[index];
             index = (index + 1) % urls.length;
             setTimeout(rotateSites, 30000); // Rotate every 30 seconds
         }
+
+        window.onload = function() {
+            shuffle(urls); // Randomize order before starting rotation
+            rotateSites();
+        };
     </script>
 </head>
-<body onload="rotateSites()">
+<body>
     <iframe id="iframe"></iframe>
 </body>
 </html>
