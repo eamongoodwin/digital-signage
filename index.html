@@ -10,31 +10,31 @@
     </style>
     <script>
         var urls = [
-            "https://onemilliontweetmap.com/",
+            "https://onemilliontweetmap.com/?center=25.64152637306577,0&zoom=2&search=&timeStep=0&timeSelector=0&hashtag1=&hashtag2=sad&sidebar=yes&rendering=sentiment&hashtagBattle=0&timeRange=0&timeRange=25&heatmap=0&sun=1&cluster=1",
             "https://cryptobubbles.net/",
             "https://torflow.uncharted.software/",
             "https://labs.mapbox.com/labs/twitter-gnip/brands/",
-            "https://iknowwhatyoudownload.com/en/stat/GB/daily",
-            "http://internet-map.net/",
+            "http://internet-map.net/#3-133.7047237286027-114.06984334946307",
             "https://wigle.net/",
-            "https://research.domaintools.com/statistics",
             "http://census2012.sourceforge.net/images/geovideo.gif",
             "https://www.submarinecablemap.com/",
-            "https://www.marinetraffic.com/",
+            "https://www.marinetraffic.com/en/ais/home/centerx:-74.841/centery:44.945/zoom:12",
             "http://stuffin.space/",
             "http://listen.hatnote.com/",
             "https://www.bitlisten.com/",
             "https://fiatleak.com/",
-            "https://trends.google.com/trends/hottrends/visualize?pn=p9&nrow=4&ncol=4",
+            "https://trends.google.com/trends/hottrends/visualize?pn=p9&nrow=5&ncol=5",
             "http://histography.io/",
             "https://wiki-atlas.org/",
             "http://globe.cid.harvard.edu/",
             "https://threatmap.checkpoint.com/",
-            "https://threatmap.fortiguard.com/",
-            "https://cybermap.kaspersky.com/stats",
+            "https://fortiguard.fortinet.com/threat-map",
+            "https://cybermap.kaspersky.com",
             "https://threatmap.bitdefender.com/",
-            "https://www.digitalattackmap.com/",
-            "https://www.meteorshowers.org/"
+            "https://www.digitalattackmap.com/#anim=1&color=0&country=ALL&list=0&time=18763&view=map",
+            "https://www.meteorshowers.org/",
+            "https://www.meteorshowers.org/view/Eta-Aquariids",
+            "https://www.meteorshowers.org/view/Alpha-Capricornids"
         ];
 
         // Shuffle function using Fisher-Yates algorithm
@@ -50,7 +50,7 @@
         function rotateSites() {
             document.getElementById("iframe").src = urls[index];
             index = (index + 1) % urls.length;
-            setTimeout(rotateSites, 30000); // Rotate every 30 seconds
+            setTimeout(rotateSites, 60000); // Rotate every 30 seconds
         }
 
         window.onload = function() {
