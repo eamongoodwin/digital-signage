@@ -42,11 +42,11 @@
         function rotateSites() {
             document.getElementById("iframe").src = urls[index];
             index = (index + 1) % urls.length;
-            setTimeout(rotateSites, 60000); // Rotate every 30 seconds
+            setTimeout(rotateSites, 60000); // Rotate = 30 seconds
         }
 
         window.onload = function() {
-            shuffle(urls); // Randomize order before starting rotation
+            shuffle(urls); // Random order before Rotate
             rotateSites();
         };
     </script>
